@@ -15,8 +15,8 @@ function App() {
               <div>
                 <input type='button' value="AC" id='clear' onClick={e => setValue('')}/>
                 <input type='button' value="DE" onClick={e => setValue(value.slice(0, -1))}/>
-                <input type='button' value="." id='decimal'/>
-                <input type='button' value="/" id='divide'/>
+                <input type='button' value="." id='decimal'onClick={e => setValue(value + e.target.value)}/>
+                <input type='button' value="/" id='divide'onClick={e => setValue(value + e.target.value)}/>
               </div>
               <div>
                 <input type='button' value="7" id='seven' onClick={e => setValue(value + e.target.value)} />
